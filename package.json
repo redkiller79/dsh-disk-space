@@ -1,0 +1,73 @@
+{
+  "name": "dsh-disk-space",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: read-only disk usage scan, biggest-space-hog ranking and an interactive HTML cleanup report for Windows and macOS.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "disk-usage",
+    "storage-analyzer",
+    "c-drive",
+    "read-only"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "redkiller79",
+    "url": "https://github.com/redkiller79"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redkiller79/dsh-disk-space.git"
+  },
+  "homepage": "https://github.com/redkiller79/dsh-disk-space#readme",
+  "bugs": {
+    "url": "https://github.com/redkiller79/dsh-disk-space/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1"
+  },
+  "dependencies": {},
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.1 <0.3.0",
+      "profiles": [
+        "web",
+        "desktop"
+      ],
+      "platforms": [
+        "win32",
+        "darwin"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# dsh-disk-space bundle patch
+# One host plugin entry. Tools are registered in-process via ctx.tools.
+- insert:
+    - id: dsh-disk-space
+      name: 'dsh-disk-space'
+      inject: [tools]
